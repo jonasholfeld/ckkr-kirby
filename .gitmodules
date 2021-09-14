@@ -7,3 +7,6 @@
 [submodule "site/plugins/kirby-pagetable"]
 	path = site/plugins/kirby-pagetable
 	url = https://github.com/sylvainjule/kirby-pagetable.git
+[submodule "site/plugins/kirby3-autoid"]
+	path = site/plugins/kirby3-autoid
+	url = https://github.com/bnomei/kirby3-autoid.git
