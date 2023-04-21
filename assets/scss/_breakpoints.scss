@@ -1,0 +1,19 @@
+@mixin desktop {
+    @media
+        only screen and (min-device-width: 813px) and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (min-device-width: 668px) and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-aspect-ratio: 4/5)
+        {
+            @content;
+        }
+}
+
+@mixin mobile {
+    @media
+        only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait),
+        only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait),
+        only screen and (max-aspect-ratio: 4/5)
+        {
+            @content;
+        }
+}

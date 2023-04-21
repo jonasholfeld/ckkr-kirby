@@ -1,0 +1,142 @@
+$col-columns: 12;
+
+@mixin grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+  @for $i from 1 through $col-columns {
+
+    .col-#{$i} {
+      width: percentage($i / $col-columns);
+
+      @include mobile() {
+        width: 100%;
+      }
+    }
+  }
+
+
+@mixin col-1 {
+    width: percentage(1 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+
+@mixin col-2 {
+    width: percentage(2 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-3 {
+    width: percentage(3 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-4 {
+    width: percentage(4 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-5 {
+    width: percentage(5 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-6 {
+    width: percentage(6 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-7 {
+    width: percentage(7 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-8 {
+    width: percentage(8 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-9 {
+    width: percentage(9 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-10 {
+    width: percentage(10 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-11 {
+    width: percentage(11 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+@mixin col-12 {
+    width: percentage(12 / $col-columns);
+
+    @include mobile() {
+        width: 100%;
+    }
+}
+
+
+
+//for the kirby colums plugin
+
+
+.block-type-columns {
+    .grid {
+      --columns: 12;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @include desktop {
+        .grid {
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .grid > .column {
+            grid-column: span var(--columns);
+        }
+    }
+}
+
+
