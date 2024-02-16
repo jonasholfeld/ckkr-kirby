@@ -20,10 +20,7 @@ function minifyCSS($buffer) {
 	$buffer = preg_replace('/\n|\t|\r/', '', $buffer);
 
 	// Remove unnecessary spaces.
-
-	//this kills calc because a + b becomes a+b
-	//$buffer = preg_replace('/\s{2,}/', ' ', $buffer);
-
+	$buffer = preg_replace('/\s{2,}/', ' ', $buffer);
 	$buffer = str_replace(': ', ':', $buffer);
 	$buffer = str_replace('} ', '}', $buffer);
 	$buffer = str_replace('{ ', '{', $buffer);
@@ -33,7 +30,7 @@ function minifyCSS($buffer) {
 	$buffer = str_replace(' {', '{', $buffer);
 	$buffer = str_replace(' )', ')', $buffer);
 	$buffer = str_replace(' (', '(', $buffer);
-	//$buffer = str_replace(') ', ')', $buffer);
+	$buffer = str_replace(') ', ')', $buffer);
 	$buffer = str_replace('( ', '(', $buffer);
 	$buffer = str_replace(' ;', ';', $buffer);
 	$buffer = str_replace(' ,', ',', $buffer);
